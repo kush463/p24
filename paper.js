@@ -12,14 +12,14 @@ class paper{
      this.y = y;
      this.r = r;
      this.body = Bodies.circle(this.x , this.y , this.r/2 , option)
-     World.add(World , this.body);
+     World.add(world , this.body);
     }
     display()
     {
         var paperposition = this.body.position;
         push();
         translate(paperposition.x , paperposition.y);
-        rectMode(CENTER);
+        ellipseMode(CENTER);
         strokeWeight(3);
         fill(128,0,128);
         ellipse(0,0,this.r , this.r);
